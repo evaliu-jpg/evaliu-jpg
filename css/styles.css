@@ -1,0 +1,704 @@
+html,
+
+/* -------------------
+DEFAULTS
+------------------- */
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  color: green;
+  line-height: 1.6;
+}
+
+body {
+  background: white;
+  color: rgb(97, 97, 97);
+}
+
+.button {
+  border-radius: 90%;
+  padding: 10%;
+  padding-bottom: 15%;
+  background-color: white;
+}
+
+h1 {
+  font-family: "Mansalva", cursive;
+}
+
+p {
+  padding: 5%;
+  align-content: center;
+}
+
+main {
+  background: white;
+  width: 50vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #90c23e;
+  color: white;
+  text-align: center;
+  height: 3vh;
+  position: fixed;
+}
+
+img {
+  height: 60%;
+  width: 60%;
+}
+
+a:link {
+  color: #cc0000;
+  text-decoration: none;
+}
+a:visited {
+  color: #999999;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff3300;
+  text-decoration: none;
+}
+
+/* -------------------
+LANDING PAGE
+------------------- */
+
+/* NAV BAR*/
+
+header {
+  position: static;
+  top: 0;
+  width: 100%;
+  height: 30%;
+  padding: 5%;
+}
+
+header nav {
+  padding: 1%;
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 15vh;
+  padding-bottom:25%;
+}
+
+header nav-steps {
+  padding: 10%;
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 5vh;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5%;
+  size: 50%;
+}
+
+#button {
+  font-size: 5vw;
+}
+
+/* STEPS LEFT LAYOUT */
+
+.list-container {
+  /*centers steps-left*/
+
+  margin: 0% 0% 0% 30%;
+  width: 50%;
+  padding: 10px;
+}
+
+li {
+  width: 4em;
+  height: 4em;
+  text-align: center;
+  line-height: 3em;
+  border-radius: 3em;
+  background: #90c23e;
+  margin: 0 1em;
+  display: inline-block;
+  color: white;
+  position: relative;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  top: 2em;
+  left: -4em;
+  width: 5em;
+  height: 0.2em;
+  background: #90c23e;
+  z-index: -1;
+}
+
+li:first-child::before {
+  display: none;
+}
+
+.active {
+  background: #90c23e;
+}
+
+.active ~ li {
+  background: lemonchiffon;
+}
+
+.active ~ li::before {
+  background: lemonchiffon;
+}
+
+/* LANDING PAGE CONTENT*/
+
+.button-signup {
+  background-color: #90c23e;
+  border-color: black;
+  border-radius: 90px;
+  margin: auto;
+  float: right;
+  position: absolute;
+  right: 40%;
+  padding: 3%;
+}
+
+.button-signin {
+  float: right;
+  border-radius: 90px;
+  background-color: #ffffff;
+  margin: auto;
+  position: absolute;
+  right: 13%;
+  padding: 3%;
+}
+
+.steps {
+  background-color: white;
+  width: 100%;
+  color: #90c23e;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+}
+
+#stepper {
+  padding: 10%;
+  margin: auto;
+}
+
+#join .flex-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1%;
+}
+
+.banner {
+  height: 30vh;
+  width: 100%;
+  background-size: 100%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1% 1%;
+  color: green;
+
+}
+
+.banner#top {
+  background-image: url("../images/choppingboard.jpg");
+  margin-top: 20%;
+  background-size: 100%;
+  height: auto;
+  width:100%;
+
+}
+
+.banner h1 {
+  font-size: 6vw;
+  line-height: 0.2;
+  color: 537436;
+}
+
+.banner p {
+  font-size: 80%;
+  padding-left: 10vw;
+  padding-top:5%;
+}
+
+.banner .button {
+  font-size: 60%;
+  background-color: #90c23e;
+  text-decoration: none;
+  color: white;
+  padding: 1% 0.5%;
+  border-radius: 10px;
+  margin-top: 10%;
+  align-items: center;
+  text-align: center;
+  width: 30vw;
+}
+.banner .button:hover {
+  background: green;
+  color: white;
+  border: none;
+}
+
+.banner#bottom {
+  background-image: url("../images/green\ vegies.jpg");
+  align-content: center;
+  width: 100%;
+
+
+}
+
+#button a {
+  display: block;
+}
+
+#info {
+  padding: 0% 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-color: white;
+  color: #333434;
+  flex-direction: column;
+}
+
+#info .box-1 {
+  background-color: white;
+  float: right;
+  padding: 5%;
+  height: 30vh;
+  width: 100vw;
+  padding-left: 5%;
+}
+
+#info .box-2 {
+  background-color: white;
+  float: left;
+  padding: 1%;
+  height: 30%;
+  width: 100vw;
+}
+
+/* -------------------
+FORM PAGE-1
+------------------- */
+
+/* plan options for users*/
+#plans {
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  border-color: white;
+  color: #333434;
+}
+
+#plans .right {
+  background-color: white;
+  float: right;
+  padding: 2px;
+  height: 100vh;
+  width: 50vw;
+  align-content: center;
+}
+
+#plans .left {
+  float: left;
+  padding: 2px;
+  height: 100vh;
+  width: 50vw;
+  align-content: center;
+  background-image: url("../images/classicplan.jpg");
+  background-size: cover;
+}
+
+.left .classic {
+  padding: 40%;
+  align-content: center;
+}
+
+.right .family {
+  padding: 10% 40% 40% 10%;
+  align-content: center;
+  background-image: url("../images/classicplan.jpg");
+  background-size: cover;
+}
+
+.right .vegetarian {
+  padding: 10% 40% 40% 10%;
+  background-image: url("../images/classicplan.jpg");
+  background-size: cover;
+}
+
+.selectbutton {
+  width: 80px;
+  height: 20px;
+  background-color: #90c23e;
+  border-radius: 30%;
+  text-align: center;
+  padding: 20%;
+}
+
+/* -------------------
+FORM PAGE-2
+------------------- */
+
+#discount {
+  background-color: #90c23e;
+  width: 100%;
+  height: 3vh;
+  text-align: center;
+  color: white;
+}
+form {
+  max-width: 1920px;
+  margin-top: 25px;
+  width: 50vw;
+  align-content: left;
+}
+
+form * {
+  box-sizing: border-box;
+}
+
+form .messages {
+  flex: 0 0 100%;
+  text-align: right;
+  padding: 5px 0;
+  color: #f2777d;
+}
+
+form .form-group.has-error > input,
+form .form-group.has-error > select {
+  border: 2px solid #f2777d;
+}
+
+form .form-group.has-success > input,
+form .form-group.has-success > select {
+  border: 2px solid #41a765;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1%;
+}
+
+.form-group label {
+  align-items: left;
+  padding-right: 20px;
+  border-block-end-width: 120px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 120px;
+}
+
+label spam {
+  display: block;
+  font-size: 0.75em;
+  opacity: 0.5;
+}
+
+label + * {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+input {
+  padding: 15px;
+  outline: none;
+  border-radius: 30px;
+}
+
+.form-group button {
+  width: 200px;
+  padding: 15px;
+  margin-left: auto;
+  outline: none;
+  border-radius: 90px;
+  background-color: #90c23e;
+  border-color: black;
+  border-radius: 30px;
+  right: 20%;
+  padding-top: 30%;
+  padding: 3%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+  border: 2px;
+  border-color: white;
+  border-radius: 30px;
+  background-color: rgba(236, 236, 236, 0.959);
+  justify-content: center;
+}
+
+.flex-column img {
+  width: 90%;
+  margin-top: 30px;
+  border-radius: 50%;
+}
+
+/* -------------------
+FORM PAGE-3
+------------------- */
+
+.Address-form {
+  width: 100%;
+  height: 500px;
+}
+/* ADDRESS*/
+
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+#map {
+  height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#locationField,
+#controls {
+  position: relative;
+  width: 480px;
+}
+#autocomplete {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 99%;
+}
+.label {
+  text-align: right;
+  font-weight: bold;
+  width: 100px;
+  color: #303030;
+  font-family: "Roboto";
+}
+#address {
+  border: 1px solid #000090;
+  background-color: #f0f9ff;
+  width: 100%;
+  padding-right: 2px;
+  height: 600px;
+}
+#address td {
+  font-size: 10pt;
+}
+.field {
+  width: 99%;
+}
+.slimField {
+  width: 80px;
+}
+.wideField {
+  width: 200px;
+}
+#locationField {
+  height: 20px;
+  margin-bottom: 2px;
+}
+
+
+/* -------------------
+FORM PAGE-4
+------------------- */
+
+.food-choice {
+  padding: 10%;
+  align-content: center;
+  height: 40vh;
+  width: 80%;
+  margin: auto;
+  size: 50%
+}
+
+/*
+/* ---------------------
+MEDIA QUERIES 
+--------------------- */
+
+/* COMPUTERS */
+
+
+
+@media only screen and (min-width: 1000px) {
+
+  header {
+    height: 20%;
+  }
+
+  #button {
+    font-size: 1vw;
+    width:90%;
+
+  }
+  .flex-container {
+    display: block;
+
+  }
+
+  .flex-column {
+    width: 100%;
+    margin: 2em;
+  }
+
+  h1 {
+    font-size: 30%;
+  }
+
+  img {
+    margin-left:0;
+    margin-right:90%;
+    padding: 2%;
+    width:10%;
+  }
+
+
+  .banner .button {
+    font-size: 90%;
+    width: 20vw;
+  }
+
+  .banner h1 {
+    font-size: 500%;
+    padding-top:20vh
+  }
+
+  .banner {
+    height: 25vh;
+  }
+
+  #info { 
+    flex-direction: row;
+  }
+
+  #plans {
+    flex-direction: row;
+    margin: auto;
+    display: block;
+
+  }
+
+  #plans .left {
+
+    width: 100vw;
+
+  }
+
+ #plans .right { 
+    width: 100vw;
+  }
+}
+
+
+
+/* TABLETS */
+@media only screen and (min-width: 600px) {
+
+  
+}
+
+/* MOBILE */
+
+
+
+
+@media only screen and (min-width: 425px) {
+  main {
+    width: auto;
+    border-radius: 0;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  form label {
+    flex: 0;
+    flex-basis: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  form label + * {
+    flex: 0;
+    flex-basis: 100%;
+  }
+
+  form button {
+    background-color: #90c23e;
+    border-color: black;
+    border-radius: 90px;
+    margin: auto;
+    float: right;
+    position: absolute;
+    right: 20%;
+    padding: 1%;
+    width: 100%;
+  }
+
+
+  .banner h1 {
+    font-size: 500%;
+  }
+  
+  .banner p {
+    font-size: 120%;
+
+  }
+  
+}
+
+
+
+/*
