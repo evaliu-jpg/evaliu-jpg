@@ -249,6 +249,10 @@ li:first-child::before {
   text-align: center;
   width: 30vw;
 }
+
+.button:hover{
+  background: green;
+}
 .banner .button:hover {
   background: green;
   color: white;
@@ -381,6 +385,11 @@ FORM PAGE-1
   font-size: 70px;
 }
 
+.selectbutton:hover {
+  background-color: green;
+}
+
+
 #discount {
   background-color: #90c23e;
   height: 5vh;
@@ -441,7 +450,7 @@ form .form-group.has-success > select {
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 250px;
-  font-size: 250%;
+  font-size: 100%;
 }
 
 label spam {

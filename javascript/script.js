@@ -8,7 +8,6 @@
       },
       format: {
         pattern: "[a-z ]+",
-        // but we don't care if the username is uppercase or lowercase
         flags: "i",
         message: "can only contain letters"
       }
@@ -22,14 +21,14 @@
       
   };
 
-  // Hook up the form so we can prevent it from being posted
+
   var form = document.querySelector("form");
   form.addEventListener("submit", function(ev) {
     ev.preventDefault();
     handleFormSubmit(form);
   });
 
-  // Hook up the inputs to validate on the fly
+
   var inputs = document.querySelectorAll("input, textarea, select");
   console.log(inputs);
   for (var i = 0; i < inputs.length; ++i) {
@@ -43,41 +42,34 @@
   function handleFormSubmit(form, input) {
     // validate the form against the constraints
     var errors = validate(form, constraints);
-    // then we update the form to reflect the results
+    //update show
     showErrors(form, errors || {});
     if (!errors) {
       showSuccess();
     }
   }
 
-  // Updates the inputs with the validation errors
   function showErrors(form, errors) {
-    // We loop through all the inputs and show the errors for that input
     form.querySelectorAll("input[name], select[name]").forEach( function(input) {
-      // Since the errors can be null if no errors were found we need to handle
-      // that
+// show no err
       showErrorsForInput(input, errors && errors[input.name]);
     });
   }
 
-  // Shows the errors for a specific input
+ // show error
   function showErrorsForInput(input, errors) {
-    // This is the root of the input
     var formGroup = closestParent(input.parentNode, "form-group")
-      // Find where the error messages will be insert into
       , messages = formGroup.querySelector(".messages");
-    // First we remove any old messages and resets the classes
     resetFormGroup(formGroup);
     // If we have errors
     if (errors) {
-      // we first mark the group has having errors
       formGroup.classList.add("has-error");
-      // then we append all the errors
       errors.forEach(function(error) {
         addError(messages, error);
+
+        //append
       });
     } else {
-      // otherwise we simply mark it as success
       formGroup.classList.add("has-success");
     }
   }
@@ -98,14 +90,11 @@
     // Remove the success and error classes
     formGroup.classList.remove("has-error");
     formGroup.classList.remove("has-success");
-    // and remove any old messages
     formGroup.querySelectorAll(".help-block.error").forEach(function(el) {
       el.parentNode.removeChild(el);
     });
   }
 
-  // Adds the specified error with the following markup
-  // <p class="help-block error">[message]</p>
   function addError(messages, error) {
     var block = document.createElement("p");
     block.classList.add("help-block");
@@ -115,6 +104,35 @@
   }
 
   function showSuccess() {
-    // We made it \:D/
     alert("Success!");
   }
+
+
+  // Credit Card and Payment Details
+  //jQuery
+
+  var owner = $('#owner'),
+    CVV = $("#cvv"), 
+    cardNumber = $('#cardNumber'),
+    cardNumberField = $('#card-number-field'),
+
+    var constraints = {
+    cvv: {
+      // Email is required
+      presence: true,
+      pattern:"1-9",
+      length: {
+        minimum: 3, maximum:3,
+        message: "check the back of your credit card for the three digits"
+      },
+    },
+  }
+
+
+
+// Aniamtion steps left
+let li = $("li"); 
+let backgroundInterval = setInterval(function(){
+    li.toggleClass("li-change");
+ },100)
+
