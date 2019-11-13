@@ -12,24 +12,26 @@
 
 </head>
 <body>
-    <header class="nav">
-        <title>Hello Fresh</title>
+    <header>
+      <title>Hello Fresh</title>
+      <section class="logo">
         <img
           src="https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg"
           alt="Hello Fresh Logo"
         />
-      <section class="list-container"
-      <ul>
-          <li >Plan</li>
-          <li class="active">Sign Up</li>
-          <li>Del</li>
-          <li >Menu</li>
-      </ul>  
       </section>
+      <section class="list-container">
+        <ul>
+          <li>Plan</li>
+          <li class="active">SignUp</li>
+          <li>Info</li>
+          <li>Menu</li>
+        </ul>
+      </section>
+      <section id="discount">
+        <p>30% off discount applied</p>
+    </section>
     </header>
-  <div id="discount">
-    <p>30% off discount applied</p>
-  </div>
 
       <main id="info">
     <form class="box-1">
@@ -51,35 +53,32 @@
       </div>
 
       <div class="form-group">
-        <a href="form-page-three.html" class="button">submit</a>
+        <a href="form-page-three.html" class="button" id="submit-button1">submit</a>
         
       </div>
     </form>
 
-    <div class="box-2"><p>blurgh</p></div>
+    <div class="box-2"><h1>Betty said...</h1><p>The kids love it too. Once avoided, veggies like potato and carrot are gobbled up with delight. Knowing the meals are nutritionally balanced means Betsy can happily recommend the recipes to other mums: "My best friend in Canada and I share recipes, but only really extraordinary ones. Everyone in the family has to love it. I have to say, HelloFresh have made the list a few times. We loved the fish tacos. Even my 4 year old was a fan!"</p>
+    </div>
+
+    <div class="footer">
+      <p>Footer</p>
+    </div>
 
     </body>
 
   </main>
 
-  <!-- ADD THE TILT JS LIBRARY HERE -->
 
-  <body>
-    <div class="your-element" data-tilt></div>
-    
-    <!-- at the end of the body -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.js"></script>
-    </body>
+<!--JS VALIDATION-->
+
+<script type="text/javascript" src ="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+
+<!-- SCRIPT.JS-->
+<script type="text/javascript" src ="javascript/script.js"></script>
 
 
-  <!-- ADD THE VALIDATE JS LIBRARY HERE -->
-
-  <script type="text/javascript" src ="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-
-  <!-- ADD THE SCRIPT.JS FILE HERE -->
-  <script type="text/javascript" src ="javascript/script.js"></script>
-
-  
 
 </body>
 </html>

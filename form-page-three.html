@@ -8,82 +8,134 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css">
-
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9pDl5esbJs7zzGNQb15b4R5d5-BOTOKk&libraries=places"></script> 
+<!--fix Ainvalid API key.. -->
 
 </head>
 <body>
-    <header class="nav">
-        <title>Hello Fresh</title>
-        <img
-          src="https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg"
-          alt="Hello Fresh Logo"
-        />
-      <section class="list-container">
-      <ul>
-          <li>Plan</li>
-          <li>Sign Up</li>
-          <liclass="active" >Del</li>
-          <li >Menu</li>
-      </ul>  
-      </section>
-    </header>
-  <div id="discount">
-    <p>30% off discount applied</p>
-  </div>
-  <div id="locationField">
-      <input id="autocomplete"
-             placeholder="Enter your address"
-             onFocus="geolocate()"
-             type="text"/>
-    </div>
-    
-    <!-- Note: The address components in this sample are typical. You might need to adjust them for
-               the locations relevant to your app. For more information, see
-         https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
-    -->
-    <section class="Address-form">
-    <table id="address">
-      <tr>
-        <td class="label">Street address</td>
-        <td class="slimField"><input class="field" id="street_number" disabled="true"/></td>
-        <td class="wideField" colspan="2"><input class="field" id="route" disabled="true"/></td>
-      </tr>
-      <tr>
-        <td class="label">City</td>
-        <td class="wideField" colspan="3"><input class="field" id="locality" disabled="true"/></td>
-      </tr>
-      <tr>
-        <td class="label">State</td>
-        <td class="slimField"><input class="field" id="administrative_area_level_1" disabled="true"/></td>
-        <td class="label">Zip code</td>
-        <td class="wideField"><input class="field" id="postal_code" disabled="true"/></td>
-      </tr>
-      <tr>
-        <td class="label">Country</td>
-        <td class="wideField" colspan="3"><input class="field" id="country" disabled="true"/></td>
-      </tr>
-    </table>
-    <!-- Replace the value of the key parameter with your own API key. -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWDzrUadelfUD2cmWQlYXLUsCn9VpffKs&callback=initAutocomplete"
-            async defer></script>
+  <header>
+    <title>Hello Fresh</title>
+    <section class="logo">
+      <img
+        src="https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg"
+        alt="Hello Fresh Logo"
+      />
     </section>
+    <section class="list-container">
+      <ul>
+        <li>Plan</li>
+        <li>Sign Up</li>
+        <li class="active">Info</li>
+        <li>Menu</li>
+      </ul>
+    </section>
+    <section id="discount">
+      <p>30% off discount applied</p>
+  </section>
+  </header>
 
-  <!-- ADD THE TILT JS LIBRARY HERE -->
-
-  <body>
-    <div class="your-element" data-tilt></div>
-    
-    <!-- at the end of the body -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.js"></script>
-    </body>
+  <form class="box-3">
+  <h2>Delivery</h2>
 
 
-  <!-- ADD THE VALIDATE JS LIBRARY HERE -->
+      <div class="box-3">
+          <div class="col-75">
+              <form action="/action_page.php">
+
+        
+                <div class="box-3">
+                  <div class="col-50">
+                    <h3>Billing Address</h3>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                          <option value="">Choose Country</option>
+                    
+                          <option value="AU">Australia</option>
+                          <option value="NZ">New Zealand</option>
+                          <option value="US">United States</option>
+                          <option value="UK">United Kingdom</option>
+                        </select>
+                        <div class="messages"></div>
+                      </div>
+                    
+                        
+                          <div class="form-group">
+                            <label for="postcode">Postcode </label>
+                            <input type="number" id="postcode" name="postcode" placeholder="Enter your postcode here">
+                            <div class="messages"></div>
+                          </div>
+
+                    <label for="fname">
+                      
+                    </i> Full Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Jane">
+                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                    <input type="text" id="email" name="email" placeholder="jane@example.com">
+                    <br><label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                    <input type="text" id="adr" name="address" placeholder="542 Walter Street">
+                    <label for="city"><i class="fa fa-institution"></i> City</label>
+                    <input type="text" id="city" name="city" placeholder="Sydney">
+        
+                    <div class="box-3">
+                      <div class="col-50">
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state" placeholder="NSW">
+                      </div>
+                    </div>
+                  </div>
+        
+                  <h2>Payment</h2>
+                  <div class="col-50">
+                    <label for="cname">Name on Card</label>
+                    <input type="text" id="cname" name="cardname" placeholder="Jane Citizen">
+                    <br><label for="ccnum">Credit card number</label>
+                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                    <br><label for="expirymonth">Expiry Month</label>
+                    <input type="text" id="expmonth" name="expmonth" placeholder="September">
+        
+                    <div class="row">
+                      <div class="col-50">
+                        <label for="expyear">Expiry Year</label>
+                        <input type="text" id="expyear" name="expyear" placeholder="2021">
+                      </div>
+                      <div class="col-50">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="352">
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+                <label>
+                  <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing address.
+                </label>
+                <a href="end page.html" class="button" type="submit">Confirm Order"</a>
+
+                
+              
+            
+          
+        
+      
+
+      <section class="box-2">
+        <p>We meal prep so you don't have to...</p>
+
+        
+      </section>
+
+      
+
+
+
+
+<!--JS VALIDATION-->
 
   <script type="text/javascript" src ="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
 
-  <!-- ADD THE SCRIPT.JS FILE HERE -->
+  <!-- SCRIPT.JS-->
   <script type="text/javascript" src ="javascript/script.js"></script>
 
   

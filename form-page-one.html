@@ -8,73 +8,72 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header class="nav-steps">
+    <header>
       <title>Hello Fresh</title>
-      <img
-        src="https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg"
-        alt="Hello Fresh Logo"
-      />
+      <section class="logo">
+        <img
+          src="https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg"
+          alt="Hello Fresh Logo"
+        />
+      </section>
       <section class="list-container">
         <ul>
-          <li class="active">Plan</li>
-          <li>Sign Up</li>
-          <li>Del</li>
-          <li>Menu</li>
+          <li>Plan</li>
+          <li>SignUp</li>
+          <li>Info</li>
+          <li class="active">Menu</li>
         </ul>
       </section>
+      <section id="discount">
+        <p>30% off discount applied</p>
+    </section>
     </header>
-    <div id="discount">
-      <p>30% off discount applied</p>
-    </div>
 
     <section id="plans">
+      <section id= "plan-label">
       <div class="left">
         <div class="classic">
-          <p>Classic Plan</p>
-          <p>$9.50 $6.60</p>
+          <p>Seafood Laksa</p>
+          <p style=text-decoration:line-through>$9.50</p> <p>$6.60</p>
           <div class="selectbutton">
             <a href="form-page-two.html">Select</a>
+          
           </div>
         </div>
       </div>
+      <section id= "plan-label"></section>
       <div class="right">
         <div class="family">
-          <p>Family Plan</p>
-          <p>$7.50 $5.60</p>
+          <p>Chicken and Rice</p>
+          <p style=text-decoration:line-through>$7.50</p><p>$5.60</p>
           <div class="selectbutton">
             <a href="form-page-two.html">Select</a>
+          
           </div>
         </div>
+        <section id= "plan-label"></section>
         <div class="vegetarian">
-          <p>Vegetarian Plan</p>
-          <p>$7.90 $6.60</p>
+          <p>Cous cous salad</p>
+          <p style=text-decoration:line-through>$7.90 </p><p>$6.60</p>
           <div class="selectbutton">
             <a href="form-page-two.html">Select</a>
+            
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ADD THE TILT JS LIBRARY HERE -->
+    <div class="footer">
+      <p>Footer</p>
+    </div>
 
-    <body>
-      <div class="your-element" data-tilt></div>
 
-      <!-- at the end of the body -->
-      <script
-        type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.js"
-      ></script>
-    </body>
+<!--JS VALIDATION-->
 
-    <!-- ADD THE VALIDATE JS LIBRARY HERE -->
+<script type="text/javascript" src ="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
 
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"
-    ></script>
+<!-- SCRIPT.JS-->
+<script type="text/javascript" src ="javascript/script.js"></script>
 
-    <!-- ADD THE SCRIPT.JS FILE HERE -->
-    <script type="text/javascript" src="javascript/script.js"></script>
-  </body>
-</html>
+

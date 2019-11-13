@@ -1,21 +1,19 @@
 html,
 
 /* -------------------
-DEFAULTS
+DEFAULTS FOR MOBILE LAYOUT
+- Media Queries describe web layout
 ------------------- */
 
 body {
   padding: 0;
-  margin: 0;
+  margin: auto;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   width: 100%;
-
-  margin: 0;
-  font-family: "Raleway", sans-serif;
   font-size: 17px;
-  color: green;
-  line-height: 1.6;
+  color: #527336;
+  line-height: 1.5;
 }
 
 body {
@@ -23,29 +21,19 @@ body {
   color: rgb(97, 97, 97);
 }
 
-.button {
-  border-radius: 90%;
-  padding: 10%;
-  padding-bottom: 15%;
-  background-color: white;
-}
-
 h1 {
   font-family: "Mansalva", cursive;
 }
 
+h2 {
+  padding-top: 5%;
+  font-size: 40px;
+}
+
 p {
-  padding: 5%;
   align-content: center;
 }
 
-main {
-  background: white;
-  width: 50vw;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1em;
-}
 
 .footer {
   left: 0;
@@ -58,45 +46,40 @@ main {
   position: fixed;
 }
 
-img {
-  height: 60%;
-  width: 60%;
-}
-
 a:link {
-  color: #cc0000;
+  color: #ffffff;
   text-decoration: none;
 }
 a:visited {
-  color: #999999;
+  color: #ffffff;
   text-decoration: none;
 }
 a:hover {
-  color: #ff3300;
+  color: eaf0cf;
   text-decoration: none;
 }
 
 /* -------------------
 LANDING PAGE
 ------------------- */
+/* header section */
 
-/* NAV BAR*/
+
 
 header {
   position: static;
   top: 0;
   width: 100%;
-  height: 30%;
-  padding: 5%;
+  height: 25%;
 }
 
-header nav {
-  padding: 1%;
+header .button-container {
   display: block;
   margin: auto;
+  margin-right: 15%;
   width: 100%;
-  height: 15vh;
-  padding-bottom:25%;
+  height: 5vh;
+  padding: 5%;
 }
 
 header nav-steps {
@@ -107,50 +90,58 @@ header nav-steps {
   height: 5vh;
 }
 
-img {
+.landing-header-item {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 5%;
-  size: 50%;
+  padding-left: 30%;
+  padding: 20px;
+  height: 10vh;
+  justify-content: center;
 }
 
-#button {
-  font-size: 5vw;
+img {
+  width: 80%;
+  height: 80%;
 }
 
+.container{
+  margin:auto;
+  padding:3%;
+  padding-left:15%;
+}
 /* STEPS LEFT LAYOUT */
 
 .list-container {
   /*centers steps-left*/
-
-  margin: 0% 0% 0% 30%;
-  width: 50%;
+  margin: 0% 0% 0% 10%;
+  width: 100%;
   padding: 10px;
 }
 
 li {
-  width: 4em;
-  height: 4em;
+  width: 6em;
+  height: 6em;
   text-align: center;
-  line-height: 3em;
-  border-radius: 3em;
+  line-height: 6em;
+  border-radius: 6em;
   background: #90c23e;
   margin: 0 1em;
   display: inline-block;
   color: white;
   position: relative;
+  font-size: 25px;
 }
 
 li::before {
   content: "";
   position: absolute;
-  top: 2em;
-  left: -4em;
+  top: 3em;
+  left: -5em;
   width: 5em;
-  height: 0.2em;
+  height: 0.5em;
   background: #90c23e;
-  z-index: -1;
+  z-index: -3;
 }
 
 li:first-child::before {
@@ -162,11 +153,11 @@ li:first-child::before {
 }
 
 .active ~ li {
-  background: lemonchiffon;
+  background: #eaf0cf;
 }
 
 .active ~ li::before {
-  background: lemonchiffon;
+  background: #eaf0cf;
 }
 
 /* LANDING PAGE CONTENT*/
@@ -178,36 +169,35 @@ li:first-child::before {
   margin: auto;
   float: right;
   position: absolute;
-  right: 40%;
+  right: 50%;
   padding: 3%;
 }
 
 .button-signin {
   float: right;
   border-radius: 90px;
-  background-color: #ffffff;
+  background-color: #eaf0cf;
   margin: auto;
   position: absolute;
-  right: 13%;
+  right: 20%;
   padding: 3%;
 }
 
 .steps {
   background-color: white;
-  width: 100%;
   color: #90c23e;
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 50%;
   margin: auto;
 }
 
 #stepper {
-  padding: 10%;
-  margin: auto;
+  padding: 4%;
+  margin: 5%;
+  font-size: 1vh;
 }
 
 #join .flex-container {
@@ -217,7 +207,7 @@ li:first-child::before {
 }
 
 .banner {
-  height: 30vh;
+  height: 50vh;
   width: 100%;
   background-size: 100%;
   background-position: center;
@@ -227,39 +217,34 @@ li:first-child::before {
   align-items: center;
   text-align: center;
   padding: 1% 1%;
-  color: green;
-
+  color: white;
+  background-color: rgba(255, 255, 255, 0.527);
 }
 
 .banner#top {
-  background-image: url("../images/choppingboard.jpg");
-  margin-top: 20%;
+  background-image: url("../images/garlic-board.jpg");
+  margin-top: 6%;
   background-size: 100%;
-  height: auto;
-  width:100%;
-
+  height: 50%;
+  width: 100%;
+  background-size: cover;
 }
 
-.banner h1 {
-  font-size: 6vw;
-  line-height: 0.2;
-  color: 537436;
+.banner#top h1 {
+  margin: 3%;
+  font-size: 50px;
+  line-height: 1;
+  color: white;
 }
 
-.banner p {
+.button {
   font-size: 80%;
-  padding-left: 10vw;
-  padding-top:5%;
-}
-
-.banner .button {
-  font-size: 60%;
   background-color: #90c23e;
   text-decoration: none;
   color: white;
-  padding: 1% 0.5%;
+  padding: 2% 1.5%;
   border-radius: 10px;
-  margin-top: 10%;
+  margin: 3%;
   align-items: center;
   text-align: center;
   width: 30vw;
@@ -271,11 +256,10 @@ li:first-child::before {
 }
 
 .banner#bottom {
-  background-image: url("../images/green\ vegies.jpg");
+  background-image: url("../images/threefoodsies.jpg");
   align-content: center;
   width: 100%;
-
-
+  background-size: cover;
 }
 
 #button a {
@@ -283,108 +267,142 @@ li:first-child::before {
 }
 
 #info {
-  padding: 0% 1%;
+  padding: 5%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  flex-direction: column;
   border-color: white;
   color: #333434;
-  flex-direction: column;
+  align-items: center;
 }
 
 #info .box-1 {
   background-color: white;
-  float: right;
-  padding: 5%;
   height: 30vh;
-  width: 100vw;
-  padding-left: 5%;
+  color: #333434;
+  padding: 1%;
 }
 
 #info .box-2 {
-  background-color: white;
-  float: left;
-  padding: 1%;
-  height: 30%;
-  width: 100vw;
+  margin: auto;
+  text-align: center;
+  font-size: 15px;
+  padding:1%;
+  background-image: url(/images/familybrekkie.jpg);
 }
 
+.box-2 {
+  padding: 40% 10%;
+  text-align: left;
+  color: white;
+  font-size: 40px;
+}
+
+#bignum {
+  font-size: 5vh;
+  font-family: "Mansalva", cursive;
+  line-height: 1%;
+}
 /* -------------------
 FORM PAGE-1
 ------------------- */
 
 /* plan options for users*/
 #plans {
-  padding: 3%;
+  padding: 1%;
   display: flex;
   flex-direction: column;
   width: 100vw;
   border-color: white;
   color: #333434;
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  margin-top:20%;
 }
 
+#plans .left {
+  padding: 5%;
+  padding-top: 10%;
+  align-content: center;
+  background-image: url("../images/salmon.jpg");
+  background-size: cover;
+  height: 60%;
+  line-height: 10%;
+}
+
+.classic {
+  padding: 2px;
+  align-content: center;
+  font-size: 80px;
+  color: white;
+}
 #plans .right {
   background-color: white;
   float: right;
   padding: 2px;
   height: 100vh;
-  width: 50vw;
+  width: 100vw;
   align-content: center;
-}
-
-#plans .left {
-  float: left;
-  padding: 2px;
-  height: 100vh;
-  width: 50vw;
-  align-content: center;
-  background-image: url("../images/classicplan.jpg");
   background-size: cover;
 }
 
-.left .classic {
-  padding: 40%;
+.family {
+  padding: 5%;
+  padding-top: 10%;
   align-content: center;
+  background-image: url("../images/familybrekkie.jpg");
+  background-size: cover;
+  height: 80%;
+  font-size: 80px;
+  line-height: 10%;
+  color: white;
 }
 
-.right .family {
-  padding: 10% 40% 40% 10%;
-  align-content: center;
-  background-image: url("../images/classicplan.jpg");
+.vegetarian {
+  padding-top: 10%;
+  padding: 5%;
+  background-image: url("../images/vegetarian.jpg");
   background-size: cover;
-}
-
-.right .vegetarian {
-  padding: 10% 40% 40% 10%;
-  background-image: url("../images/classicplan.jpg");
-  background-size: cover;
+  height: 80%;
+  font-size: 80px;
+  line-height: 10%;
+  color: white;
 }
 
 .selectbutton {
-  width: 80px;
-  height: 20px;
+  width: 300px;
+  height: 90px;
   background-color: #90c23e;
-  border-radius: 30%;
+  border-radius: 20px;
   text-align: center;
-  padding: 20%;
+  padding: 4%;
+  padding-top: 13%;
+  margin: auto;
+  font-size: 70px;
+}
+
+#discount {
+  background-color: #90c23e;
+  height: 5vh;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  padding: 1.5%;
+  width:100vw;
+}
+
+div p {
+  padding: 15px;
 }
 
 /* -------------------
 FORM PAGE-2
 ------------------- */
 
-#discount {
-  background-color: #90c23e;
-  width: 100%;
-  height: 3vh;
-  text-align: center;
-  color: white;
-}
 form {
   max-width: 1920px;
-  margin-top: 25px;
-  width: 50vw;
+  margin-top: 20px;
+  width: 100vw;
   align-content: left;
 }
 
@@ -394,7 +412,7 @@ form * {
 
 form .messages {
   flex: 0 0 100%;
-  text-align: right;
+  text-align: left;
   padding: 5px 0;
   color: #f2777d;
 }
@@ -419,10 +437,11 @@ form .form-group.has-success > select {
 .form-group label {
   align-items: left;
   padding-right: 20px;
-  border-block-end-width: 120px;
+  border-block-end-width: 250px;
   flex-grow: 0;
   flex-shrink: 0;
-  flex-basis: 120px;
+  flex-basis: 250px;
+  font-size: 250%;
 }
 
 label spam {
@@ -440,7 +459,7 @@ label + * {
 input {
   padding: 15px;
   outline: none;
-  border-radius: 30px;
+  border-radius: 90px;
 }
 
 .form-group button {
@@ -502,8 +521,9 @@ FORM PAGE-3
 html,
 body {
   height: 100%;
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  display: block;
+  padding: 1%;
 }
 
 #locationField,
@@ -548,6 +568,62 @@ body {
   margin-bottom: 2px;
 }
 
+.box-3 {
+  padding: 2%;
+}
+
+input {
+  padding: 2%;
+}
+
+#country {
+  border: #90c23e;
+  border-style: solid;
+  border-radius: 10px;
+  width: 50vw;
+}
+
+main {
+  width: 100%;
+}
+
+form {
+  width: 100%;
+}
+
+form label {
+  flex: 0;
+  flex-basis: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+form label + * {
+  flex: 0;
+  padding: 1.5%;
+}
+
+form button {
+  background-color: #90c23e;
+  border-color: black;
+  border-radius: 90px;
+  margin: auto;
+  float: right;
+  position: absolute;
+  right: 20%;
+  padding: 1%;
+  width: 100%;
+}
+
+.banner h1 {
+  font-size: 500%;
+}
+
+.banner p {
+  font-size: 80%;
+  padding: 3%;
+}
+
 
 /* -------------------
 FORM PAGE-4
@@ -559,146 +635,201 @@ FORM PAGE-4
   height: 40vh;
   width: 80%;
   margin: auto;
-  size: 50%
+  size: 50%;
 }
 
-/*
+/*ENDING PAGE  */
+
+.finish {
+  padding: 20px;
+  padding-top: 140px;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+}
+
 /* ---------------------
 MEDIA QUERIES 
 --------------------- */
 
 /* COMPUTERS */
-
-
-
-@media only screen and (min-width: 1000px) {
-
+@media only screen and (min-width: 1024px) {
   header {
-    height: 20%;
+    height: 30vh;
+  }
+
+  main {
+    margin:0;
+    width:100%;
+  }
+
+  .landing-header {
+    display: flex;
+    height: 10%;
+    padding: 3%;
+    margin: 1%;
+    flex-direction: row;
+  }
+  .button-signup {
+    right: 40%;
+    padding: 1%;
+  }
+
+  .banner#top h1 {
+    margin: 3%;
+    font-size: 40px;
+    line-height: 1;
+    color: white;
+  }
+
+  .button-signin {
+    right: 30%;
+    padding: 1%;
   }
 
   #button {
     font-size: 1vw;
-    width:90%;
-
+    width: 100%;
+    margin: auto;
   }
   .flex-container {
     display: block;
-
   }
 
   .flex-column {
     width: 100%;
-    margin: 2em;
+    margin: 30px;
   }
 
-  h1 {
-    font-size: 30%;
+  .landing-header-item {
+    padding: 0;
   }
 
-  img {
-    margin-left:0;
-    margin-right:90%;
-    padding: 2%;
-    width:10%;
+  .landing-header-item img {
+    width: 80%;
+    height: 80%;
+    margin: 0;
   }
 
+  .nav button {
+    overflow: hidden;
+    display: block;
+  }
 
+  .stepper {
+    padding: 0;
+    margin: 0;
+    line-height: 15%;
+  }
+
+  header .button-container {
+    display: block;
+    margin: auto;
+    margin-top: 0;
+    width: 100%;
+    height: 1vh;
+    padding: 5%;
+  }
+
+  #bignum {
+    font-size: 200px;
+    margin: 20%;
+    line-height: 20vh;
+  }
+
+  #stepper {
+    padding: 1%;
+    margin: 1%;
+    font-size: 1vh;
+  }
   .banner .button {
-    font-size: 90%;
+    font-size: 20px;
     width: 20vw;
+    padding: 0.5%;
   }
 
   .banner h1 {
-    font-size: 500%;
-    padding-top:20vh
+    font-size: 800%;
+    padding: 1% 5%;
   }
 
   .banner {
     height: 25vh;
   }
 
-  #info { 
+  #info {
     flex-direction: row;
-  }
-
-  #plans {
-    flex-direction: row;
-    margin: auto;
-    display: block;
-
-  }
-
-  #plans .left {
-
-    width: 100vw;
-
-  }
-
- #plans .right { 
-    width: 100vw;
-  }
-}
-
-
-
-/* TABLETS */
-@media only screen and (min-width: 600px) {
-
-  
-}
-
-/* MOBILE */
-
-
-
-
-@media only screen and (min-width: 425px) {
-  main {
-    width: auto;
-    border-radius: 0;
-  }
-
-  form {
-    width: 100%;
-  }
-
-  form label {
-    flex: 0;
-    flex-basis: 100%;
-    text-align: center;
-    padding: 10px;
-  }
-
-  form label + * {
-    flex: 0;
-    flex-basis: 100%;
-  }
-
-  form button {
-    background-color: #90c23e;
-    border-color: black;
-    border-radius: 90px;
-    margin: auto;
-    float: right;
-    position: absolute;
-    right: 20%;
     padding: 1%;
-    width: 100%;
+    margin:0;
+    height:60vh;
+  }
+
+  .box-1 {
+    padding:3%;
+    padding-right:5%;
+    padding-top:15%;
+  }
+  .box1 img {
+    scale: 50%;
+  }
+
+  .banner#bottom {
+    flex-direction: row;
   }
 
 
-  .banner h1 {
-    font-size: 500%;
-  }
-  
-  .banner p {
-    font-size: 120%;
+  /* STEPS LEFT LAYOUT */
 
-  }
-  
+    /*centers steps-left*/
+
+  .list-container {
+
+  margin:0;
+  padding: 1%;
+ }
+
+
+ li {
+  width: 3em;
+  height: 3em;
+  text-align: center;
+  line-height: 3em;
+  border-radius: 6em;
+  background: #90c23e;
+  margin: 0 30px;
+  display: inline-block;
+  color: white;
+  position: relative;
+  font-size: 12px;
+  padding:20px;
+ }
+
+ li::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: -8em;
+  width: 12em;
+  height: 0.5em;
+  background: #90c23e;
+  z-index: -3;
+ }
+
+ li:first-child::before {
+  display: none;
+ }
+
+ .active {
+  background: #90c23e;
+ }
+
+ .active ~ li {
+  background: #eaf0cf;
+ }
+
+ .active ~ li::before {
+  background: #eaf0cf;
+ }
+
 }
-
-
-
-/*
